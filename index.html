@@ -72,6 +72,17 @@ h1,h2,h3{font-family:var(--serif-jp);font-weight:400;letter-spacing:.15em}
 .series h3{font-size:1.1rem;margin:10px 0 14px}
 .series p{color:var(--haairo);font-size:.88rem;line-height:2}
 
+/* seminar cards */
+.sem{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1px;background:var(--tetsuguro);border:1px solid var(--tetsuguro)}
+.sem article{background:var(--shikkoku);padding:40px 28px;display:flex;flex-direction:column}
+.sem h3{font-size:1.12rem;line-height:1.7;margin:10px 0 14px}
+.sem .what{color:var(--gofun);opacity:.82;font-size:.88rem;line-height:2}
+.sem .tags{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0}
+.sem .tags span{border:1px solid var(--tetsuguro);color:var(--kin);font-size:.7rem;padding:0 10px;letter-spacing:.12em}
+.sem .hist{list-style:none;margin-top:auto;border-top:1px solid var(--tetsuguro);padding-top:14px}
+.sem .hist li{color:var(--haairo);font-size:.8rem;line-height:2}
+.sem .hist b{font-family:var(--sans-en);font-weight:300;color:var(--gofun);margin-right:12px;letter-spacing:.08em}
+
 /* cta */
 .cta{text-align:center}
 .cta h2{font-size:clamp(1.4rem,4vw,2rem);line-height:1.8}
@@ -144,66 +155,83 @@ footer{padding:56px 0;text-align:center;color:var(--haairo);font-family:var(--sa
   </div>
 </section>
 
-<section class="dark" id="series">
+<section class="dark" id="archive">
   <div class="container">
     <div class="head fade">
-      <div class="en">02 ─ SERIES</div>
-      <h2>零式の講座</h2>
-      <p>部分ではなく、つながりで身体を見る。<br>それぞれの講座は、零式という一つの体系の入口です。</p>
+      <div class="en">02 ─ ARCHIVE</div>
+      <h2>これまでの零式セミナー</h2>
+      <p>部分ではなく、つながりで身体を見る。<br>どの講座も、零式という一つの体系の入口です。</p>
     </div>
-    <div class="series fade">
-      <div><div class="num">HEAD</div><h3>ヘッドコンディショニング-極-</h3><p>頭部・頸椎・神経・頭蓋。頭の問題を、頭だけで終わらせない。</p></div>
-      <div><div class="num">MERIDIAN</div><h3>経絡ストレッチ</h3><p>東洋医学の経絡と機能解剖。ただ伸ばすから、狙って変えるへ。</p></div>
-      <div><div class="num">JOINT</div><h3>零式－関節調整法</h3><p>つま先から顎、頭部まで。見極め、選び、安全に変化を生み出す。</p></div>
-      <div><div class="num">RECOVERY</div><h3>ZERO RECOVERY</h3><p>分断された技術を、評価に基づいて一つの施術へ統合する。</p></div>
-      <div><div class="num">FOUNDATION</div><h3>手を作る ／ 足を作る</h3><p>触れる手と、立つ足。臨床の土台を、感覚と構造からつくり直す。</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="archive">
-  <div class="container">
-    <div class="head fade">
-      <div class="en">03 ─ ARCHIVE</div>
-      <h2>これまでの歩み</h2>
-    </div>
-    <div class="fade">
-      <div class="year">
-        <div class="y">2026</div>
-        <ul>
-          <li><span class="d">09.26 – 27</span><span class="t">零式－経絡ストレッチ</span><span class="p">大阪・箕面</span></li>
-          <li><span class="d">08.22</span><a class="t" href="https://noriatsu3377-hue.github.io/BAL.ZERO/">ヘッドコンディショニング-極-</a><span class="p">東京</span></li>
-          <li><span class="d">08.15</span><span class="t">解剖×評価×施術でつくる美姿勢</span><span class="p">三重</span></li>
-          <li><span class="d">06.27</span><a class="t" href="https://noriatsu3377-hue.github.io/asitukuru.lp/">足を作るセミナー</a><span class="p">大阪</span></li>
-          <li><span class="d">06.20 – 21</span><a class="t" href="https://noriatsu3377-hue.github.io/keiraku.sutoretti2/">経絡ストレッチ 2日間</a><span class="p">大阪・箕面</span></li>
-          <li><span class="d">06.14</span><span class="t">ヘッド＆経絡ストレッチ 体験セミナー</span><span class="p">オンライン</span></li>
-          <li><span class="d">05.16</span><a class="t" href="https://noriatsu3377-hue.github.io/head.nagoya/">ヘッドコンディショニング-極-</a><span class="p">名古屋</span></li>
-          <li><span class="d">04.18</span><a class="t" href="https://noriatsu3377-hue.github.io/head.saitama/">ヘッドコンディショニング-極-</a><span class="p">埼玉</span></li>
-          <li><span class="d">04.11</span><a class="t" href="https://noriatsu3377-hue.github.io/asitukuru/">足を作るセミナー【完全版】</a><span class="p">大阪・箕面</span></li>
-          <li><span class="d">03.28</span><a class="t" href="https://noriatsu3377-hue.github.io/head.kiwami/">ヘッドコンディショニング-極-</a><span class="p">大阪・箕面</span></li>
-          <li><span class="d">03.14 – 15</span><a class="t" href="https://noriatsu3377-hue.github.io/keiraku.sutoretti/">経絡ストレッチ 2日間</a><span class="p">大阪・箕面</span></li>
-          <li><span class="d">01.10</span><a class="t" href="https://noriatsu3377-hue.github.io/teotukuru/">セラピストの為の「手」を作るセミナー</a><span class="p">大阪・箕面 ／ オンライン</span></li>
-        </ul>
-      </div>
-      <div class="year">
-        <div class="y">2025</div>
-        <ul>
-          <li><span class="d">12.20</span><a class="t" href="https://noriatsu3377-hue.github.io/bikyaku1/">施術で作る美脚美尻セミナー</a><span class="p">三重</span></li>
-        </ul>
-      </div>
-      <div class="year">
-        <div class="y">2024</div>
-        <ul>
-          <li><span class="d">SUMMER</span><span class="t">経絡アプローチ超実践合宿</span><span class="p">合宿</span></li>
-        </ul>
-      </div>
+    <div class="sem fade">
+      <article>
+        <div class="num">HEAD</div>
+        <h3>零式－ヘッドコンディショニング-極-</h3>
+        <p class="what">頭蓋・頸椎・神経から整える頭部の技術。頭痛・眼精疲労・自律神経の不調に、解剖に基づいて向き合う。</p>
+        <div class="tags"><span>頭蓋</span><span>頸椎</span><span>脳神経</span><span>自律神経</span></div>
+        <ul class="hist"><li><b>2026.03.28</b>大阪・箕面</li><li><b>2026.04.18</b>埼玉</li><li><b>2026.05.16</b>名古屋</li><li><b>2026.08.22</b>東京</li></ul>
+      </article>
+      <article>
+        <div class="num">MERIDIAN</div>
+        <h3>零式－経絡ストレッチ</h3>
+        <p class="what">東洋医学の経絡と機能解剖を統合したストレッチ。触れていない場所まで変える、「狙って変える」技術。</p>
+        <div class="tags"><span>経絡</span><span>運動連鎖</span><span>ストレッチ</span><span>2日間</span></div>
+        <ul class="hist"><li><b>2026.03.14–15</b>大阪・箕面</li><li><b>2026.06.20–21</b>大阪・箕面</li><li><b>2026.09.26–27</b>大阪・箕面</li></ul>
+      </article>
+      <article>
+        <div class="num">MERIDIAN CAMP</div>
+        <h3>零式－経絡アプローチ超実践合宿</h3>
+        <p class="what">経絡アプローチを泊まり込みで徹底的に実践。理論を、手が覚えるまで繰り返す合宿形式。</p>
+        <div class="tags"><span>経絡</span><span>実技集中</span><span>合宿</span></div>
+        <ul class="hist"><li><b>2024</b>合宿</li></ul>
+      </article>
+      <article>
+        <div class="num">FOOT</div>
+        <h3>零式－足を作るセミナー</h3>
+        <p class="what">身体の土台である足を、神経・構造・感覚から作り直す。変化が出て、説明できて、再現できる1日。</p>
+        <div class="tags"><span>足部</span><span>構造調整</span><span>感覚再学習</span></div>
+        <ul class="hist"><li><b>2026.04.11</b>大阪・箕面</li><li><b>2026.06.27</b>大阪・箕面</li></ul>
+      </article>
+      <article>
+        <div class="num">HAND</div>
+        <h3>零式－セラピストの為の「手」を作るセミナー</h3>
+        <p class="what">結果を変えるのは、触れる手。感覚を磨き、評価と施術の精度を上げる「手」の育て方。</p>
+        <div class="tags"><span>触診</span><span>感覚</span><span>基礎</span></div>
+        <ul class="hist"><li><b>2026.01.10</b>大阪・箕面 ／ オンライン</li></ul>
+      </article>
+      <article>
+        <div class="num">LEG &amp; HIP</div>
+        <h3>零式－施術で作る美脚美尻セミナー</h3>
+        <p class="what">下肢と骨盤を施術で変える。見た目の変化を、解剖と評価から組み立てる。</p>
+        <div class="tags"><span>下肢</span><span>骨盤</span><span>ボディライン</span></div>
+        <ul class="hist"><li><b>2025.12.20</b>三重</li></ul>
+      </article>
+      <article>
+        <div class="num">POSTURE</div>
+        <h3>零式－解剖×評価×施術でつくる美姿勢</h3>
+        <p class="what">姿勢を「直す対象」ではなく「情報」として読む。解剖・評価・施術を一つの流れでつなぐ。</p>
+        <div class="tags"><span>姿勢評価</span><span>解剖</span><span>施術</span></div>
+        <ul class="hist"><li><b>2026.08.15</b>三重</li></ul>
+      </article>
+      <article>
+        <div class="num">BODY MAKE</div>
+        <h3>零式－ボディメイクコンディショニング</h3>
+        <p class="what">整えてから、動かす。手技とトレーニングをつなぎ、身体づくりの結果を変えるコンディショニング。</p>
+        <div class="tags"><span>手技</span><span>トレーニング</span><span>ボディメイク</span></div>
+      </article>
+      <article>
+        <div class="num">EXPERIENCE</div>
+        <h3>零式－ヘッド＆経絡ストレッチ 体験セミナー</h3>
+        <p class="what">頭蓋・頸椎・神経・経絡。零式のコンディショニングを2時間で体験する入門編。</p>
+        <div class="tags"><span>入門</span><span>2時間</span><span>オンライン可</span></div>
+        <ul class="hist"><li><b>2026.06.14</b>大阪・箕面 ／ オンライン</li></ul>
+      </article>
     </div>
   </div>
 </section>
 
 <section class="dark cta">
   <div class="container fade">
-    <div class="en">04 ─ NEXT</div>
+    <div class="en">03 ─ NEXT</div>
     <h2 style="margin-top:16px">次の開催を、<br>いち早く受け取る。</h2>
     <p>新しいセミナーの日程は、公式LINE「臨床整体師の秘訣」で先にお知らせしています。</p>
     <a class="btn" href="https://lin.ee/OyfgnE3">公式LINEで受け取る</a>
