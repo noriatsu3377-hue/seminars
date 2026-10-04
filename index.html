@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>零 -ZERO- SEMINAR ｜ 原口慶篤</title>
+<meta name="description" content="原口慶篤が主宰する零 -ZERO- のセミナー。開催予定とこれまでの歩み。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@200;300;400&family=Noto+Sans+JP:wght@300;400&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>零</text></svg>">
+<style>
+:root{
+  --shikkoku:#050505;--sumiguro:#111111;--tetsuguro:#1a1a1a;
+  --gofun:#f1efe8;--haairo:#8b8983;--shuiro:#7a1712;--kin:#a48a58;
+  --serif-jp:'Shippori Mincho','Noto Serif JP',serif;
+  --sans-jp:'Noto Sans JP',sans-serif;
+  --serif-en:'Cormorant Garamond',serif;--sans-en:'Inter',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--shikkoku);color:var(--gofun);font-family:var(--sans-jp);font-weight:300;line-height:2;letter-spacing:.08em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:1000px;margin:0 auto;padding:0 16px}
+section{padding:18vh 0}
+.dark{background:var(--sumiguro)}
+.line{border-top:1px solid var(--tetsuguro)}
+.en{font-family:var(--serif-en);font-weight:300;letter-spacing:.3em;color:var(--kin);font-size:.85rem}
+.num{font-family:var(--serif-en);color:var(--haairo);font-size:.9rem;letter-spacing:.2em}
+h1,h2,h3{font-family:var(--serif-jp);font-weight:400;letter-spacing:.15em}
+
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:center;position:relative;padding:0}
+.hero .kanji{position:absolute;right:-4vw;top:50%;transform:translateY(-50%);font-family:var(--serif-jp);font-size:min(60vw,560px);color:var(--sumiguro);line-height:1;pointer-events:none;user-select:none}
+.hero .inner{position:relative;z-index:1}
+.hero h1{font-size:clamp(2rem,6vw,3.6rem);line-height:1.6;margin:24px 0 32px}
+.hero p{color:var(--haairo);max-width:34em}
+.hero .stat{margin-top:56px;display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.hero .stat b{font-family:var(--serif-jp);font-weight:400;font-size:clamp(1.6rem,4vw,2.2rem);color:var(--gofun)}
+.hero .stat span{color:var(--haairo);font-size:.9rem}
+
+.head{margin-bottom:64px}
+.head h2{font-size:clamp(1.5rem,4vw,2.2rem);margin-top:12px}
+.head p{color:var(--haairo);margin-top:16px}
+
+/* upcoming */
+.up{display:grid;gap:1px;background:var(--tetsuguro);border:1px solid var(--tetsuguro)}
+.card{background:var(--shikkoku);padding:40px 32px;display:grid;grid-template-columns:200px 1fr auto;gap:32px;align-items:center;transition:background .6s cubic-bezier(.16,1,.3,1)}
+.card:hover{background:var(--sumiguro)}
+.card .date{font-family:var(--serif-en);font-size:1.6rem;letter-spacing:.1em;line-height:1.4}
+.card .date small{display:block;font-family:var(--sans-jp);font-size:.75rem;color:var(--haairo);letter-spacing:.15em}
+.card h3{font-size:1.3rem;line-height:1.7}
+.card .meta{color:var(--haairo);font-size:.85rem;margin-top:8px}
+.card .tag{display:inline-block;border:1px solid var(--shuiro);color:#c9776f;font-size:.72rem;padding:0 10px;margin-right:8px;letter-spacing:.15em}
+.more{font-family:var(--sans-en);font-size:.75rem;letter-spacing:.3em;color:var(--kin);white-space:nowrap;border-bottom:1px solid var(--kin);padding-bottom:4px}
+
+/* archive */
+.year{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:40px 0;border-top:1px solid var(--tetsuguro)}
+.year:last-child{border-bottom:1px solid var(--tetsuguro)}
+.year .y{font-family:var(--serif-en);font-size:2rem;color:var(--kin);line-height:1.2;font-weight:300}
+.year ul{list-style:none}
+.year li{display:grid;grid-template-columns:110px 1fr auto;gap:16px;padding:14px 0;border-bottom:1px dotted var(--tetsuguro);align-items:baseline}
+.year li:last-child{border-bottom:none}
+.year .d{font-family:var(--sans-en);font-weight:200;color:var(--haairo);font-size:.85rem;letter-spacing:.1em}
+.year .t{font-family:var(--serif-jp);font-size:1.02rem}
+.year .p{color:var(--haairo);font-size:.8rem;white-space:nowrap}
+.year a.t:hover{color:var(--kin)}
+
+/* series */
+.series{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--tetsuguro);border:1px solid var(--tetsuguro)}
+.series div{background:var(--shikkoku);padding:36px 28px}
+.series h3{font-size:1.1rem;margin:10px 0 14px}
+.series p{color:var(--haairo);font-size:.88rem;line-height:2}
+
+/* cta */
+.cta{text-align:center}
+.cta h2{font-size:clamp(1.4rem,4vw,2rem);line-height:1.8}
+.cta p{color:var(--haairo);margin:24px auto 48px;max-width:30em}
+.btn{display:inline-block;border:1px solid var(--gofun);padding:18px 56px;font-size:.95rem;letter-spacing:.2em;transition:all .6s cubic-bezier(.16,1,.3,1)}
+.btn:hover{background:var(--gofun);color:var(--shikkoku)}
+.sub-links{margin-top:40px;display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+.sub-links a{color:var(--haairo);font-size:.85rem;border-bottom:1px solid var(--tetsuguro);padding-bottom:4px}
+.sub-links a:hover{color:var(--gofun)}
+
+footer{padding:56px 0;text-align:center;color:var(--haairo);font-family:var(--sans-en);font-size:.7rem;letter-spacing:.3em;border-top:1px solid var(--tetsuguro)}
+
+.fade{opacity:0;transform:translateY(24px);transition:opacity 1.2s cubic-bezier(.16,1,.3,1),transform 1.2s cubic-bezier(.16,1,.3,1)}
+.fade.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}}
+
+@media (max-width:760px){
+  section{padding:12vh 0}
+  .card{grid-template-columns:1fr;gap:16px;padding:32px 20px}
+  .year{grid-template-columns:1fr;gap:8px}
+  .year li{grid-template-columns:1fr;gap:2px}
+  .year .p{white-space:normal}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="kanji" aria-hidden="true">零</div>
+  <div class="container inner">
+    <div class="en">ZERO SEMINAR</div>
+    <h1>型を教えるのではない。<br>判断を、手渡す。</h1>
+    <p>目の前の身体を評価し、選び、確かめる。<br>零 -ZERO- のセミナーは、技術の数ではなく、技術をつなぐ「考え方」を持ち帰る場です。</p>
+    <div class="stat"><b>延べ200名以上</b><span>のトレーナー・セラピストが受講</span></div>
+  </div>
+</section>
+
+<section class="line" id="upcoming">
+  <div class="container">
+    <div class="head fade">
+      <div class="en">01 ─ UPCOMING</div>
+      <h2>開催予定</h2>
+    </div>
+    <div class="up fade">
+      <a class="card" href="https://noriatsu3377-hue.github.io/ZEROkansetu/">
+        <div class="date">10.17 – 18<small>2026 / SAT – SUN</small></div>
+        <div>
+          <h3>零式－関節調整法 BASIC</h3>
+          <div class="meta"><span class="tag">東京</span>各日 10:00〜17:00 ／ 少人数実技制</div>
+        </div>
+        <span class="more">DETAIL</span>
+      </a>
+      <a class="card" href="https://noriatsu3377-hue.github.io/ZEROkansetu/">
+        <div class="date">11.21 – 22<small>2026 / SAT – SUN</small></div>
+        <div>
+          <h3>零式－関節調整法 ADVANCE</h3>
+          <div class="meta"><span class="tag">東京</span>各日 10:00〜17:00 ／ BASIC＋ADVANCE 全4日間のセットあり</div>
+        </div>
+        <span class="more">DETAIL</span>
+      </a>
+      <a class="card" href="https://noriatsu3377-hue.github.io/ZERO-RECOVERY/">
+        <div class="date">12.19 – 20<small>2026 / SAT – SUN</small></div>
+        <div>
+          <h3>零式－ZERO RECOVERY 第1期</h3>
+          <div class="meta"><span class="tag">東京</span>両日 10:00〜17:00 ／ 定員12名 ／ ヘッドコンディショニング-極- 修了者限定</div>
+        </div>
+        <span class="more">DETAIL</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="series">
+  <div class="container">
+    <div class="head fade">
+      <div class="en">02 ─ SERIES</div>
+      <h2>零式の講座</h2>
+      <p>部分ではなく、つながりで身体を見る。<br>それぞれの講座は、零式という一つの体系の入口です。</p>
+    </div>
+    <div class="series fade">
+      <div><div class="num">HEAD</div><h3>ヘッドコンディショニング-極-</h3><p>頭部・頸椎・神経・頭蓋。頭の問題を、頭だけで終わらせない。</p></div>
+      <div><div class="num">MERIDIAN</div><h3>経絡ストレッチ</h3><p>東洋医学の経絡と機能解剖。ただ伸ばすから、狙って変えるへ。</p></div>
+      <div><div class="num">JOINT</div><h3>零式－関節調整法</h3><p>つま先から顎、頭部まで。見極め、選び、安全に変化を生み出す。</p></div>
+      <div><div class="num">RECOVERY</div><h3>ZERO RECOVERY</h3><p>分断された技術を、評価に基づいて一つの施術へ統合する。</p></div>
+      <div><div class="num">FOUNDATION</div><h3>手を作る ／ 足を作る</h3><p>触れる手と、立つ足。臨床の土台を、感覚と構造からつくり直す。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="archive">
+  <div class="container">
+    <div class="head fade">
+      <div class="en">03 ─ ARCHIVE</div>
+      <h2>これまでの歩み</h2>
+    </div>
+    <div class="fade">
+      <div class="year">
+        <div class="y">2026</div>
+        <ul>
+          <li><span class="d">09.26 – 27</span><span class="t">零式－経絡ストレッチ</span><span class="p">大阪・箕面</span></li>
+          <li><span class="d">08.22</span><a class="t" href="https://noriatsu3377-hue.github.io/BAL.ZERO/">ヘッドコンディショニング-極-</a><span class="p">東京</span></li>
+          <li><span class="d">08.15</span><span class="t">解剖×評価×施術でつくる美姿勢</span><span class="p">三重</span></li>
+          <li><span class="d">06.27</span><a class="t" href="https://noriatsu3377-hue.github.io/asitukuru.lp/">足を作るセミナー</a><span class="p">大阪</span></li>
+          <li><span class="d">06.20 – 21</span><a class="t" href="https://noriatsu3377-hue.github.io/keiraku.sutoretti2/">経絡ストレッチ 2日間</a><span class="p">大阪・箕面</span></li>
+          <li><span class="d">06.14</span><span class="t">ヘッド＆経絡ストレッチ 体験セミナー</span><span class="p">オンライン</span></li>
+          <li><span class="d">05.16</span><a class="t" href="https://noriatsu3377-hue.github.io/head.nagoya/">ヘッドコンディショニング-極-</a><span class="p">名古屋</span></li>
+          <li><span class="d">04.18</span><span class="t">ヘッドコンディショニング-極-</span><span class="p">東京</span></li>
+          <li><span class="d">04.11</span><a class="t" href="https://noriatsu3377-hue.github.io/asitukuru/">足を作るセミナー【完全版】</a><span class="p">大阪・箕面</span></li>
+          <li><span class="d">SPRING</span><a class="t" href="https://noriatsu3377-hue.github.io/head.saitama/">ヘッドコンディショニング-極-</a><span class="p">埼玉</span></li>
+          <li><span class="d">03.28</span><a class="t" href="https://noriatsu3377-hue.github.io/head.kiwami/">ヘッドコンディショニング-極-</a><span class="p">大阪・箕面</span></li>
+          <li><span class="d">03.14 – 15</span><a class="t" href="https://noriatsu3377-hue.github.io/keiraku.sutoretti/">経絡ストレッチ 2日間</a><span class="p">大阪・箕面</span></li>
+          <li><span class="d">01.10</span><a class="t" href="https://noriatsu3377-hue.github.io/teotukuru/">セラピストの為の「手」を作るセミナー</a><span class="p">大阪・箕面 ／ オンライン</span></li>
+        </ul>
+      </div>
+      <div class="year">
+        <div class="y">2025</div>
+        <ul>
+          <li><span class="d">12.20</span><a class="t" href="https://noriatsu3377-hue.github.io/bikyaku1/">施術で作る美脚美尻セミナー</a><span class="p">三重</span></li>
+        </ul>
+      </div>
+      <div class="year">
+        <div class="y">2024</div>
+        <ul>
+          <li><span class="d">SUMMER</span><span class="t">経絡アプローチ超実践合宿</span><span class="p">合宿</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark cta">
+  <div class="container fade">
+    <div class="en">04 ─ NEXT</div>
+    <h2 style="margin-top:16px">次の開催を、<br>いち早く受け取る。</h2>
+    <p>新しいセミナーの日程は、公式LINE「臨床整体師の秘訣」で先にお知らせしています。</p>
+    <a class="btn" href="https://lin.ee/OyfgnE3">公式LINEで受け取る</a>
+    <div class="sub-links">
+      <a href="https://noriatsu3377-hue.github.io/ZERO-/members.html">ZERO MEMBERS</a>
+      <a href="https://noriatsu3377-hue.github.io/noriotoha.lp/">原口慶篤について</a>
+    </div>
+  </div>
+</section>
+
+<footer>零 -ZERO- ／ TOTAL BODY FITNESS THEORY</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.fade');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
